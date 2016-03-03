@@ -1,13 +1,20 @@
 import page from './page/'
 
-export default function install(router) {
-    router.map({
-        '/controls.accordion':{
-            component: page.controlsAccordion
-        },
-    });
 
+let map = {}
+
+const comRE = /^([a-z\d]+)([A-Z][a-z]+?)$/
+
+Object.keys(page).forEach((route)=>{
+    var tmp = route.replace(comRE,'$1.$2').toLowerCase()
+    map['/'+tmp] = {
+        component:page[route]
+    }
+})
+
+export default function install(router) {
+    router.map(map);
     router.redirect({
-    	'*':'/controls.accordion'
+    	'*':'/base.icon'
     });
 }

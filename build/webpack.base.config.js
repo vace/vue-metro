@@ -19,6 +19,7 @@ module.exports = {
         // make sure to exclude 3rd party code in node_modules
         exclude: /node_modules/
       },
+      {test:/\.css$/,loader:'style!css'},
       {
         // edit this for additional asset file types
         test: /\.(png|jpg|gif)$/,
