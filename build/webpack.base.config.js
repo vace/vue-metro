@@ -1,9 +1,11 @@
+var path = require('path')
+
 module.exports = {
-  entry: './src/main.js',
+  entry: './docs/index.js',
   output: {
     path: './dist',
     publicPath: 'dist/',
-    filename: 'build.js'
+    filename: 'build.doc.js'
   },
   module: {
     loaders: [
@@ -13,7 +15,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel!eslint',
+        loader: 'babel',
         // make sure to exclude 3rd party code in node_modules
         exclude: /node_modules/
       },
@@ -30,12 +32,17 @@ module.exports = {
       }
     ]
   },
+
+  resolve: {
+    root: path.resolve('./')
+  },
+
   // vue-loader config:
   // lint all JavaScript inside *.vue files with ESLint
-  // make sure to adjust your .eslintrc
+  // make sure to adjust your rc
   vue: {
     loaders: {
-      js: 'babel!eslint'
+      js: 'babel'
     }
   }
 }
