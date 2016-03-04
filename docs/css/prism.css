@@ -80,26 +80,6 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
-pre[class*="language-"]:before,
-pre[class*="language-"]:after {
-	content: '';
-	z-index: -2;
-	display: block;
-	position: absolute;
-	bottom: 0.75em;
-	left: 0.18em;
-	width: 40%;
-	height: 20%;
-	max-height: 13em;
-	-webkit-box-shadow: 0px 13px 8px #979797;
-	-moz-box-shadow: 0px 13px 8px #979797;
-	box-shadow: 0px 13px 8px #979797;
-	-webkit-transform: rotate(-2deg);
-	-moz-transform: rotate(-2deg);
-	-ms-transform: rotate(-2deg);
-	-o-transform: rotate(-2deg);
-	transform: rotate(-2deg);
-}
 
 :not(pre) > code[class*="language-"]:after,
 pre[class*="language-"]:after {

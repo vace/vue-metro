@@ -12,6 +12,8 @@
 </template>
 
 <script>
+
+let pregExp = /(\b\w+?)=""/g
 export default{
 	data:function(){
 		return {
@@ -20,7 +22,8 @@ export default{
 	},
 	ready:function(){
 		var fragment = this._slotContents.default.firstChild
-		this.innerHtml = fragment.innerHTML
+		//replace xx=""
+		this.innerHtml = fragment.innerHTML.replace(pregExp, '$1')
 	}
 }
 </script>
