@@ -1,3 +1,5 @@
+/* node:true */
+
 require('./transition/index.js')
 
 import icon from './base/icon.vue'
@@ -14,7 +16,7 @@ import window from './information/window.vue'
 //visualization
 import panels from './visualization/panels.vue'
 
-export default{
+const vueMetro = {
 	icon,
 	accordion,
 	panel,
@@ -25,3 +27,5 @@ export default{
 
 	panels
 }
+
+module.exports = vueMetro

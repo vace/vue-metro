@@ -1,6 +1,6 @@
 <template>
 
-<slot v-el:code></slot>
+<slot></slot>
 
 <div class="example" data-text="code">
 	<pre>

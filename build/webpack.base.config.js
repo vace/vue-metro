@@ -1,11 +1,14 @@
 var path = require('path')
 
 module.exports = {
-  entry: './docs/index.js',
+  entry :{
+    'vue-metro':'./docs/index.js'
+  },
   output: {
     path: './dist',
     publicPath: 'dist/',
-    filename: 'build.doc.js'
+    filename: '[name].js',
+    libraryTarget:'umd'
   },
   module: {
     loaders: [

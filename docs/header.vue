@@ -1,7 +1,7 @@
 <template>
 <header class="app-bar fixed-top navy" data-role="appbar">
     <div class="container">
-        <a href="/" class="app-bar-element branding"> Metro UI CSS</a>
+        <a href="/" class="app-bar-element branding"> Vue-Metro</a>
 
         <ul class="app-bar-menu small-dropdown">
             <li>
