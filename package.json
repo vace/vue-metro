@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --inline --hot --config build/webpack.dev.config.js",
+    "dev": "webpack-dev-server --inline --hot --config build/webpack.docs.config.js",
     "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js",
     "docs": "webpack --progress --hide-modules --config build/webpack.docs.config.js",
     "test": "karma start build/karma.conf.js"

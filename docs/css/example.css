@@ -1,8 +1,12 @@
+html,body{
+  min-height: 100%;
+}
 .vue-example {
   margin: 10px 0;
 }
 .page-content {
   padding-top: 48px;
+  overflow:hidden;
 }
 .color-list li {
   display: inline-block;

@@ -15,6 +15,6 @@ Object.keys(page).forEach((route)=>{
 export default function install(router) {
     router.map(map);
     router.redirect({
-    	'*':'/base.icon'
+    	'*':'/menus.appbar'
     });
 }
