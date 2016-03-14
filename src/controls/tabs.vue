@@ -1,11 +1,16 @@
 <template>
 	<div :class="{tabcontrol:!skin,tabcontrol2:skin,'tabs-bottom':bottom}">
-		<ul class="tabs">
-	        <li @click="activeUuid = tab.id" v-for="tab in tabs" track-by="$index" :class="{active:activeUuid==tab.id,disabled:tab.disabled}">
+	    <div class="frames" v-if="bottom">
+	    	<slot></slot>
+		</div>
+
+		<ul class="tabs" :class="{'tab-bottom':bottom}">
+	        <li @click="!tab.disabled && (activeUuid = tab.id)" v-for="tab in tabs" track-by="$index" :class="{active:activeUuid==tab.id,disabled:tab.disabled}">
 	        	<a>{{tab.title}}</a>
 	        </li>
 	    </ul>
-	    <div class="frames">
+
+	    <div class="frames" v-if="!bottom">
 	    	<slot></slot>
 		</div>
 	</div>
@@ -31,19 +36,13 @@
 				activeUuid:''
 			}
 		},
-		methods:{
-			openFrames(uuid){
-				console.log(uuid)
-			}
-		},
 		watch:{
 			activeUuid(val){
-				console.log(val)
+				this.$broadcast('toggleTabs',val)
 			}
 		},
 		ready(){
 			var index = 0;
-
 			for(var i = 0, _len = this.tabs.length ; i < _len ; i++){
 				if(this.tabs[i].active){
 					index = i;

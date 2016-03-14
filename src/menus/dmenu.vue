@@ -19,7 +19,7 @@
 
 		props:{
 				title:{type:String},
-				menus:{type: Array,default:[]}
+				menus:{type: Array,default(){return []}}
 			},
 		data:function(){
 			return {

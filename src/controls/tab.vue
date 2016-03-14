@@ -27,6 +27,9 @@
 			},
 			openTab(){
 				this.display = true
+			},
+			toggleTabs(val){
+				this.display = this.uuid === val
 			}
 		}
 	}

@@ -4,9 +4,7 @@
 
 <div class="example" data-text="code">
 	<pre>
-		<code class="language-markup">
-			{{innerHtml}}
-		</code>
+		<code class="hljs html">{{{innerHtml}}}</code>
 	<pre>
 </div>
 </template>
@@ -20,10 +18,14 @@ export default{
 			innerHtml:''
 		}
 	},
+
 	ready:function(){
 		var fragment = this._slotContents.default.firstChild
+		console.log(this)
 		//replace xx=""
-		this.innerHtml = fragment.innerHTML.replace(pregExp, '$1')
+		var innerHtml = fragment.innerHTML.replace(pregExp, '$1')
+		var res = hljs.highlight('html',html_beautify(innerHtml));
+		this.innerHtml = res.value
 	}
 }
 </script>
