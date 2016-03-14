@@ -12,7 +12,8 @@ import menus from './menus/index'
 // controls
 import accordion from './controls/accordion.vue'
 import panel from './controls/panel.vue'
-
+import tabs from './controls/tabs.vue'
+import tab from './controls/tab.vue'
 
 //information
 import window from './information/window.vue'
@@ -32,6 +33,8 @@ let vueMetro = {
 	// controls
 	accordion,
 	panel,
+	tabs,
+	tab,
 
 	//information
 	window,

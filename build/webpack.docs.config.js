@@ -1,5 +1,5 @@
 var webpack = require('webpack')
-var config = require('./webpack.base.config')
+var config = require('./webpack.dev.config')
 
 
 config.entry = {

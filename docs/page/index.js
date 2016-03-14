@@ -6,6 +6,7 @@ import menusAppbar from './menus/appbar.vue'
 import menusMenu from './menus/menu.vue'
 
 import controlsAccordion from './controls/accordion.vue'
+import controlsTabs from './controls/tabs.vue'
 
 export default {
 	baseIcon,
@@ -14,5 +15,6 @@ export default {
 	menusAppbar,
 	menusMenu,
 
-	controlsAccordion
+	controlsAccordion,
+	controlsTabs
 }
