@@ -1,6 +1,6 @@
 <template>
 	<main-header></main-header>
-	<div class="container page-content" style="margin-top: 65px;">
+	<div class="container page-content">
         <router-view></router-view>
 	</div>
 	<main-footer></main-footer>

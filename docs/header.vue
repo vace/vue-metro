@@ -34,6 +34,11 @@
                     {
                         title:'Tabs',
                         href:'#controls.tabs'
+                    },
+
+                    {
+                        title:'Window',
+                        href:'#informations.window'
                     }
                 ],
                 COMMUNITY:[

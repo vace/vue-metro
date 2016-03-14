@@ -1,5 +1,5 @@
 <template>
-	<h1><a href="index.html" class="nav-button transform"><span></span></a>&nbsp;Metro Icon Font</h1>
+	<doc-title> Metro Icon Font </doc-title>
 
 	<div class="margin20 no-margin-left no-margin-right sub-header text-light">
 	    Metro Icon Font gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. Metro Icon Font includes over 400 icons.

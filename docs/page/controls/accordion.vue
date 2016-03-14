@@ -1,4 +1,5 @@
 <template>
+    <doc-title> Accordion Control </doc-title>
     <div class="example">
         <div class="grid">
             <show-code>

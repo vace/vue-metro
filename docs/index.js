@@ -5,13 +5,14 @@ import installRouter from './router'
 import Main from './main.vue'
 import vueMetro from '../src/index'
 
-import showCode from './page/docs/show-code.vue'
+import docs from './page/docs/'
 
 Object.keys(vueMetro).forEach(function(name){
 	Vue.component(name,vueMetro[name])
 })
-
-Vue.component('show-code',showCode)
+Object.keys(docs).forEach(function(name){
+	Vue.component(name,docs[name])
+})
 
 let router = new VueRouter()
 

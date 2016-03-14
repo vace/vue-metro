@@ -2,7 +2,7 @@
     <li>
     	<a href="#" class="dropdown-toggle" :class="{'active-toggle':opening}" @click.prevent="openDropdown">{{title}}</a>
         <ul class="d-menu" data-role="dropdown" v-show="opening" style="display:block;">
-            <li v-for="menu in menus">
+            <li v-for="menu in menus" @click="selectMenu(menu.href)">
             	<a v-if="menu.href" :href="menu.href">{{menu.title}}</a>
             	<dmenu v-if="menu.subs" :title="menu.title" :menus="menu.subs"></dmenu>
             </li>
@@ -37,7 +37,11 @@
 				if(this.opening){
 					this.$dispatch('menuOpened',this.uuid)
 				}
-
+			},
+			selectMenu(href){
+				if(href){
+					this.opening = false
+				}
 			}
 		},
 		events:{
